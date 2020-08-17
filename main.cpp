@@ -89,6 +89,8 @@ void display(void)
         string A = "00";
 
         time[p]-= ( !p && time[p] > 12 ? 12 : 0 );
+        
+        if(p==0 && time[p]==0)time[p]=12;
 
         for(int t = 0 ; t < 2; t++){
             A[t]+=time[p]%10;
